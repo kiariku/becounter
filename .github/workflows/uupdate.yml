@@ -16,7 +16,7 @@ jobs:
 
       - name: Download counter
         run: |
-          curl -o counter.gif "https://www.f-counter.net/j/67/1773990413/"
+          curl -o counter.gif "https://www.f-counter.net/j/67/1773995894/"
 
       - name: Convert to PNG
         run: |
