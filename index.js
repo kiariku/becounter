@@ -16,9 +16,10 @@ export default {
       </svg>
     `;
 
-    // SVG を Cloudflare の Image API で PNG に変換
+    // SVG を base64 に変換
     const url = "data:image/svg+xml;base64," + btoa(svg);
 
+    // Cloudflare の Image API で PNG に変換
     const res = await fetch(url, {
       cf: {
         image: {
