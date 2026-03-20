@@ -1,3 +1,5 @@
+import wasm from "./resvg.wasm";
+import { Resvg } from "@resvg/resvg-wasm";
 export default {
   async fetch(request, env) {
     const key = "behance-counter";
