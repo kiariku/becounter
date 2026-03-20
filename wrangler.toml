@@ -3,7 +3,7 @@ main = "index.js"
 compatibility_date = "2024-01-01"
 
 kv_namespaces = [
-  { binding = "COUNTER", id = "YOUR_KV_ID" }
+  { binding = "COUNTER", id = "054a1e12d57a4060924644078a3eec1f" }
 ]
 [wasm_modules]
 resvg = "./resvg.wasm"
