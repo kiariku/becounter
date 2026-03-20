@@ -1,0 +1,31 @@
+name: Update Counter PNG
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # 10分ごとに更新
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Download counter
+        run: |
+          curl -o counter.gif "https://www.f-counter.net/j/67/1773990413/"
+
+      - name: Convert to PNG
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+          convert counter.gif counter.png
+
+      - name: Commit files
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add counter.gif counter.png
+          git commit -m "Update counter" || echo "No changes"
+          git push
