@@ -28,4 +28,5 @@ jobs:
           git config --global user.name "GitHub Actions"
           git add counter.gif counter.png
           git commit -m "Update counter" || echo "No changes"
-          git push
+          git push 
+          
