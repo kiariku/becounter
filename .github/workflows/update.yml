@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download counter
         run: |
@@ -29,4 +29,3 @@ jobs:
           git add counter.gif counter.png
           git commit -m "Update counter" || echo "No changes"
           git push
-          
